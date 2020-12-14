@@ -60,38 +60,53 @@ int main(int argc, char *argv[])
 
             Status status = Status::Neutral;
 
-            if      (line == "red") { status = Status::Red; }
-            else if (line == "r") { status = Status::Red; }
-            else if (line == "0") { status = Status::Red; }
-            else if (line == "error") { status = Status::Red; }
-            else if (line == "fail") { status = Status::Red; }
-            else if (line == "failure") { status = Status::Red; }
-            else if (line == "unavailable") { status = Status::Red; }
-            else if (line == "unreachable") { status = Status::Red; }
-            else if (line == "broken") { status = Status::Red; }
-            else if (line == "stopped") { status = Status::Red; }
-            else if (line == "exited") { status = Status::Red; }
+            if      (line.startsWith("red")) { status = Status::Red; }
+            else if (line.startsWith("r")) { status = Status::Red; }
+            else if (line.startsWith("0")) { status = Status::Red; }
+            else if (line.startsWith("error")) { status = Status::Red; }
+            else if (line.startsWith("fail")) { status = Status::Red; }
+            else if (line.startsWith("failure")) { status = Status::Red; }
+            else if (line.startsWith("unavailable")) { status = Status::Red; }
+            else if (line.startsWith("unreachable")) { status = Status::Red; }
+            else if (line.startsWith("broken")) { status = Status::Red; }
+            else if (line.startsWith("stopped")) { status = Status::Red; }
+            else if (line.startsWith("exited")) { status = Status::Red; }
+            else if (line.startsWith("-")) { status = Status::Red; }
+            else if (line.startsWith("❤️")) { status = Status::Red; }
+            else if (line.startsWith("🟥")) { status = Status::Red; }
+            else if (line.startsWith("🔴")) { status = Status::Red; }
+            else if (line.startsWith("🛑")) { status = Status::Red; }
+            else if (line.startsWith("⛔")) { status = Status::Red; }
 
-            else if (line == "green") { status = Status::Green; }
-            else if (line == "1") { status = Status::Green; }
-            else if (line == "ok") { status = Status::Green; }
-            else if (line == "success") { status = Status::Green; }
-            else if (line == "available") { status = Status::Green; }
-            else if (line == "reachable") { status = Status::Green; }
-            else if (line == "working") { status = Status::Green; }
-            else if (line == "running") { status = Status::Green; }
+            else if (line.startsWith("green")) { status = Status::Green; }
+            else if (line.startsWith("+")) { status = Status::Green; }
+            else if (line.startsWith("1")) { status = Status::Green; }
+            else if (line.startsWith("ok")) { status = Status::Green; }
+            else if (line.startsWith("success")) { status = Status::Green; }
+            else if (line.startsWith("available")) { status = Status::Green; }
+            else if (line.startsWith("reachable")) { status = Status::Green; }
+            else if (line.startsWith("working")) { status = Status::Green; }
+            else if (line.startsWith("running")) { status = Status::Green; }
+            else if (line.startsWith("🟩")) { status = Status::Green; }
+            else if (line.startsWith("🟢")) { status = Status::Green; }
+            else if (line.startsWith("💚")) { status = Status::Green; }
+            else if (line.startsWith("")) { status = Status::Green; }
+            else if (line.startsWith("")) { status = Status::Green; }
 
-            else if (line == "yellow") { status = Status::Yellow; }
-            else if (line == "lagging") { status = Status::Yellow; }
-            else if (line == "iffy") { status = Status::Yellow; }
-            else if (line == "problems") { status = Status::Yellow; }
-            else if (line == "warning") { status = Status::Yellow; }
-            else if (line == "-1") { status = Status::Yellow; }
-            else if (line == "2") { status = Status::Yellow; }
-            else if (line == "problem") { status = Status::Yellow; }
-            else if (line == "exiting") { status = Status::Yellow; }
-            else if (line == "starting") { status = Status::Yellow; }
-            else if (line == "booting") { status = Status::Yellow; }
+            else if (line.startsWith("yellow")) { status = Status::Yellow; }
+            else if (line.startsWith("lagging")) { status = Status::Yellow; }
+            else if (line.startsWith("iffy")) { status = Status::Yellow; }
+            else if (line.startsWith("problems")) { status = Status::Yellow; }
+            else if (line.startsWith("warning")) { status = Status::Yellow; }
+            else if (line.startsWith("2")) { status = Status::Yellow; }
+            else if (line.startsWith("problem")) { status = Status::Yellow; }
+            else if (line.startsWith("exiting")) { status = Status::Yellow; }
+            else if (line.startsWith("starting")) { status = Status::Yellow; }
+            else if (line.startsWith("booting")) { status = Status::Yellow; }
+            else if (line.startsWith("🚧")) { status = Status::Yellow; }
+            else if (line.startsWith("🟡")) { status = Status::Yellow; }
+            else if (line.startsWith("🟨")) { status = Status::Yellow; }
+            else if (line.startsWith("💛")) { status = Status::Yellow; }
 
             QString resource;
 
