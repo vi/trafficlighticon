@@ -90,8 +90,6 @@ int main(int argc, char *argv[])
             else if (line.startsWith("🟩")) { status = Status::Green; }
             else if (line.startsWith("🟢")) { status = Status::Green; }
             else if (line.startsWith("💚")) { status = Status::Green; }
-            else if (line.startsWith("")) { status = Status::Green; }
-            else if (line.startsWith("")) { status = Status::Green; }
 
             else if (line.startsWith("yellow")) { status = Status::Yellow; }
             else if (line.startsWith("lagging")) { status = Status::Yellow; }
